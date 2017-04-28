@@ -1,0 +1,47 @@
+---
+title: "Introduction to RITANdata"
+author: "Michael T. Zimmermann"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+RITAN is an R package intended for Rapid Integration of Term Annotation and Network resources. RITANdata is an R package containing data to support RITAN.
+
+```{r load_data from package, echo=TRUE, results='hide'}
+library(RITANdata)
+```
+
+# Pathways, Terms, and Genesets
+
+The R object *geneset_list*
+This version of RITAN is distributed with the following annotation resources:
+```{r echo_geneset_list_names, echo=TRUE }
+names(geneset_list)
+```
+
+Please cite each resource used in your analysis. If you use data from MSigDB, please register at [MSigDB](http://software.broadinstitute.org/gsea/msigdb/index.jsp). Doing so will help to ensure the future availability and extension of these valuable resources.
+
+# Network Resources
+
+The R object, *network_list*, contains `r length(network_list)` human network-biology resources. Additionally, RITAN leverages existing R packages to access data from HPRD, BioGRID, and STRING. Citation information for each cached resource can be accessed via attr():
+```{r net_citation, echo=TRUE}
+require(knitr)
+kable( attr(network_list, 'network_data_sources') )
+```
+
+We retrive data from **HPRD** and **BioGrid** through the *ProNet* package.
+We retrive data from **STRING** through the *STRINGdb* package.
+
+# Background Gene List
+
+In any enrichment analysis, determining your background list of genes is critical. By the "background," we mean the sum/universe of entities that could have been measured in your study. For example, if you looked for mutations in any coding genes from whole-genome sequencing, then any coding gene in the genome could have been identified. However, if you ran mRNA-Seq on a fibroblast cell line, then only the genes expressed by that cell line could have been assayed.
+
+Many tools, including RITAN, make the default assumption of all human protein  coding genes for this background. In RITAN, functions have an optional input argument named *all_symbols* for defining the background gene list. If no value is given, the function *load_all_protein_coding_symbols()* will download the current list from genenames.org. We include the R object *cached_coding_genes*, which is a cached download of all human protein coding genes. This object is used in the RITAN vignettes, for expediency.
+
+It is up to the user to determine if this is a fitting assumption, or if a different background should be chosen. A few "rules of thumb" would be to use only the genes captured for library generation (e.g. exome capture region), or expressed in the input cells across any condition.
+
+
