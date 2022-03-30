@@ -1,7 +1,7 @@
 Package: RITANdata
 Type: Package
 Title: This package contains the annotation and network data sets
-Version: 1.19.0
+Version: 1.19.1
 Author: Michael Zimmermann
 Maintainer: Michael Zimmermann <zimmermann.michael@mayo.edu>
 Description: Data such as is contained in these two R data files in this
@@ -16,4 +16,3 @@ RoxygenNote: 5.0.1
 License: file LICENSE
 biocViews: AnnotationData, Homo_sapiens
 NeedsCompilation: no
-PackageStatus: Deprecated
