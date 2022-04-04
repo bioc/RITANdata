@@ -3,11 +3,12 @@ Type: Package
 Title: This package contains the annotation and network data sets
 Version: 1.19.1
 Author: Michael Zimmermann
-Maintainer: Michael Zimmermann <zimmermann.michael@mayo.edu>
+Maintainer: Michael Zimmermann <mtzimmermann@mcw.edu>
 Description: Data such as is contained in these two R data files in this
-    package are required for the RITAN package. Users may use their own
+    package are required for the RITAN package examples. Users may use their own
     or additional resources in conjunction with RITANdata.
-    See the RITAN vignettes for more information.
+    See the RITAN vignettes for more information, such as gathering more
+    up-to-date annotation data.
 LazyData: TRUE
 Depends:
     R (>= 3.4)
