@@ -1,7 +1,7 @@
 Package: RITANdata
 Type: Package
 Title: This package contains the annotation and network data sets
-Version: 1.23.0
+Version: 1.24.0
 Author: Michael Zimmermann
 Maintainer: Michael Zimmermann <mtzimmermann@mcw.edu>
 Description: Data such as is contained in these two R data files in this
