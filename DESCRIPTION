@@ -1,18 +1,19 @@
 Package: RITANdata
 Type: Package
-Title: This package contains the annotation and network data sets
-Version: 1.24.0
-Author: Michael Zimmermann
-Maintainer: Michael Zimmermann <mtzimmermann@mcw.edu>
-Description: Data such as is contained in these two R data files in this
-    package are required for the RITAN package examples. Users may use their own
+Title: This package contains reference annotation and network data sets
+Authors@R: person("Michael", "Zimmermann", email = "mtzimmermann@mcw.edu", role = c("aut", "cre"))
+Description: Data such as is contained in the two R data files in this
+    package are required for the RITAN package examples.
+    Users are highly encouraged to use their own
     or additional resources in conjunction with RITANdata.
-    See the RITAN vignettes for more information, such as gathering more
-    up-to-date annotation data.
+    See the RITAN vignettes and RITAN.md for more information,
+    such as gathering more up-to-date annotation data.
 LazyData: TRUE
+LazyDataCompression:xz
 Depends:
-    R (>= 3.4)
+    R (>= 4.2)
 VignetteBuilder: knitr
+Suggests: knitr
 RoxygenNote: 5.0.1
 License: file LICENSE
 biocViews: AnnotationData, Homo_sapiens
