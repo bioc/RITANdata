@@ -1,7 +1,7 @@
 Package: RITANdata
 Type: Package
 Title: This package contains reference annotation and network data sets
-Version: 1.27.0
+Version: 1.28.0
 Authors@R: person("Michael", "Zimmermann", email = "mtzimmermann@mcw.edu", role = c("aut", "cre"))
 Description: Data such as is contained in the two R data files in this
     package are required for the RITAN package examples.
